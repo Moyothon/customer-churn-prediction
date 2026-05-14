@@ -37,6 +37,43 @@ customer-churn-prediction/
 ## Methodology
 The dataset was cleaned by removing non-predictive identifier columns. Exploratory data analysis was conducted to understand churn patterns across age, geography, activity status, and salary. Categorical variables were encoded using Label Encoding and One-Hot Encoding. Features were scaled using StandardScaler before model training. A Random Forest Classifier was trained with class_weight='balanced' to handle the 80/20 class imbalance in the target variable. Model performance was evaluated using accuracy, precision, recall, and F1 score.
 
-![Age Distribution]()
-*Churned customers are significantly older on average*
+### Key Vizualizations
+![Churn Distribution](Churn%20Distribution.png)
 
+*Churn Distribution showing class imbalance, with approximately 80% of customers not churned (0) and 20% churned (1).*
+
+
+
+
+![Churn Rate by Age](Churn%20Rate%20by%20Age.png)
+
+*Churners are more likely to be older*
+
+
+## Results
+The model achieved an accuracy of 86.6% and an F1 score of 0.869 on the test set. Feature importance analysis identified Age, EstimatedSalary, and CreditScore as the strongest predictors of churn.
+
+## Business Insights
+*    Customers aged 45 and above churn at significantly higher rates. Targeted retention offers for this segment could reduce attrition meaningfully
+*    Inactive members are nearly twice as likely to churn. Re-engagement campaigns represent a high-ROI intervention
+*    German customers show the highest churn rate across all geographies. This is worth investigating regional service quality
+
+## How to Run
+```
+git clone https://github.com/yourname/customer-churn-prediction
+cd customer-churn-prediction
+pip install -r requirements.txt
+jupyter notebook
+```
+
+## Tools Used
+Python, pandas, NumPy, scikit-learn, matplotlib, seaborn
+
+## Author
+Odelowo Eriolaoluwa
+
+Github: https://github.com/Moyothon
+
+Linkedin: https://www.linkedin.com/in/eriolaoluwa-odelowo-b08247249/
+
+Email: eriolarabel@gmail.com
